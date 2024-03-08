@@ -9,7 +9,7 @@ I have chosen to start writing this in Julia. This is for probably not very good
 
 - I like the emojis.
 - I share a name with the code.
-- The logo reminds me of juggling balls and this code is for a juggling trainer.
+- The logo reminds me of juggling balls - this project is a _juggling_ trainer.
 - I've JUST started learning this language.
 - I don't know why not to yet.
 
