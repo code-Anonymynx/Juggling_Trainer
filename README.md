@@ -21,7 +21,7 @@ I decided to asign emojis to each list so I can choose based on how I'm feeling 
 
 **Ideas and Things to Develop**:
 
-- I'd _like_ to create a nice UI that asks me how I'm feeling today and auto prints the appropriate lists.
+- I'd like to create a nice UI that asks me how I'm feeling today and auto prints the appropriate lists.
 - Populate it with more content
 - Build most lists
 - Organise the tricks into different catagories
