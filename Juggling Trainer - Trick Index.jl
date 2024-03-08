@@ -19,13 +19,13 @@ t10 = "Orbit: Columns $l4"
 
 #This is for use later, altough you can use it to generate a random trick
 Trick_Index = (t1, t2, t3, t4, t5, t6, t7, t8, t9, t10)
-# Remeber Julia is in a 1 index 
 
-m1 = "Your trick list for today is: \n"
+m1 = "Your trick list for today is: \n \n"
+m2 = "\nHappy Juggles 🥰"
 
-easy = "$m1 $t1 $t2 $t4 $t6"
-medium = "$m1 $t1 $t2 $t3 $t4 $t5 $t6 $t7"
-hard = "$m1 $t1 $t2 $t3 $t4 $t5 $t6 $t7 $t8 $t9 $t10"
+easy = "$m1 $t1 $t2 $t4 $t6 $m2"
+medium = "$m1 $t1 $t2 $t3 $t4 $t5 $t6 $t7 $m2"
+hard = "$m1 $t1 $t2 $t3 $t4 $t5 $t6 $t7 $t8 $t9 $t10 $m2"
 
 # Choose your list based on how you're feeling today
 😁 = hard         # I'm feeling great! Let's go! 
