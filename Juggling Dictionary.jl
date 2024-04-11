@@ -1,3 +1,7 @@
+# Useful links
+# https://www.jugglingedge.com/help/siteswapanimator.php?Pattern=33522
+# https://jugglinglab.org/html/ssnotation.html#extensions
+
 # Define an empty array to store juggling tricks
 juggling_tricks = []
 
@@ -74,26 +78,52 @@ for trick_info in juggling_tricks
     push!(full_drills, (trick_info["Name"], trick_info["NumberOfCatches"]))
 end
 
-# Assign lists to variables
-easy = easy_drills 
-medium = int_drills
-hard = full_drills
-
 # Emoji variables for different moods
-😁 = hard         # I'm feeling great! Let's go! 
-🙂 = medium       # I feel okay, with at least some energy.
-😅 = easy         # I'm not feeling great, but I'll try...
+😁 = full_drills        # I'm feeling great! Let's go! 
+🙂 = int_drills       # I feel okay, with at least some energy.
+😅 = easy_drills          # I'm not feeling great, but I'll try...
 
 # Display the list of drills based on mood
 function display_trick_list(input)
     if input == 😅
-        println("Your trick list for today is: \n \n", easy, "\n\nHappy Juggles 🥰")
+        println("Your trick list for today is: \n \n", easy_drills, "\n\nHappy Juggles 🥰")
     elseif input == 🙂
-        println("Your trick list for today is: \n \n", medium, "\n\nHappy Juggles 🥰")
+        println("Your trick list for today is: \n \n", int_drills, "\n\nHappy Juggles 🥰")
     else
-        println("Your trick list for today is: \n \n", juggling_tricks, "\n\nHappy Juggles 🥰")
+        println("Your trick list for today is: \n \n", full_drills, "\n\nHappy Juggles 🥰")
     end
 end
 
 # Example usage:
 display_trick_list(😅)
+
+# Display the list of drills based on length of time available
+# Step one is to get a valid input from the user
+function get_valid_time_input(prompt::String)
+    while true
+        println(prompt)
+        input = readline()
+        try
+            time = parse(Int, input)
+            if 0 ≤ time ≤ 60
+                return time
+            else
+                println("Invalid input. Please enter a value between 0 and 60.")
+            end
+        catch
+            println("Invalid input. Please enter a valid integer.")
+        end
+    end
+end
+
+# Example usage:
+time_available = get_valid_time_input("How much time do you have today? Please answer in minutes (0 - 60)")
+
+if time_available < 10
+    println("Your trick list for today is: \n \n", easy_drills, "\n\nHappy Juggles 🥰")
+elseif time_available > 30
+    println("Your trick list for today is: \n \n", full_drills, "\n\nHappy Juggles 🥰")
+else 
+    println("Your trick list for today is: \n \n", int_drills, "\n\nHappy Juggles 🥰")
+end
+
